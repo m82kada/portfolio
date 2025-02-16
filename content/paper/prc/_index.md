@@ -27,7 +27,7 @@ inherently exhibit discontinuities in the output space, which may impede the acq
 ## Method
 We trained V-MoE [C. Riquelme+, NeurIPS 2021] with Pairwise Router Consistency (PRC) as a regularization term to ensure that the same input image patches are routed consistently.
 
-![PRC](/images/prc/prc.png)
+![PRC](images/prc/prc.png)
 <br>
 
 ## Evaluation
@@ -47,15 +47,15 @@ We visualized the changes in routing as Gaussian noise was gradually added.
 
 <div class="images-folder">
     <div>
-        <img id="img1" src="/images/prc/4-0-0.png" class="images">
+        <img id="img1" src="images/prc/4-0-0.png" class="images">
         <p id="mainImgLabel" class="image-label">Original Image</p>
     </div>
     <div>
-        <img id="img2" src="/images/prc/4-1-0.png" class="images">
+        <img id="img2" src="images/prc/4-1-0.png" class="images">
         <p class="image-label">V-MoE</p>
     </div>
     <div>
-        <img id="img3" src="/images/prc/4-2-0.png" class="images">
+        <img id="img3" src="images/prc/4-2-0.png" class="images">
         <p class="prc-label image-label">V-MoE w/ PRC</p>
     </div>
 </div>
@@ -94,9 +94,9 @@ We visualized the changes in routing as Gaussian noise was gradually added.
             document.getElementById('mainImgLabel').innerHTML = "Noised Image";
 
         }
-        document.getElementById('img1').src = '/images/prc/' + image_number + '-0-' + noise_level + '.png';
-        document.getElementById('img2').src = '/images/prc/' + image_number + '-1-' + noise_level + '.png';
-        document.getElementById('img3').src = '/images/prc/' + image_number + '-2-' + noise_level + '.png';
+        document.getElementById('img1').src = 'images/prc/' + image_number + '-0-' + noise_level + '.png';
+        document.getElementById('img2').src = 'images/prc/' + image_number + '-1-' + noise_level + '.png';
+        document.getElementById('img3').src = 'images/prc/' + image_number + '-2-' + noise_level + '.png';
     }
 </script>
 
