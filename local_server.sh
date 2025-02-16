@@ -1,0 +1,1 @@
+hugo server -w --baseURL="localhost:1313"
