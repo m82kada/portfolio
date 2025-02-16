@@ -1,6 +1,7 @@
 baseURL: "https://m82kada.github.io/portfolio"
 title: Portfolio
-paginate: 5
+pagination:
+  pagerSize: 5
 theme: PaperMod
 
 enableRobotsTXT: true
