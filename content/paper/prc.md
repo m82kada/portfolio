@@ -78,8 +78,22 @@ We visualized the changes in routing as Gaussian noise was gradually added.
 <script>
     var image_number = 4;
     var noise_level = 0;
+    var images = {};
+    function loadImage(index) {
+        if (index in images) return;
+
+        images[index] = {};
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 10; j++) {
+                images[index][i * 10 + j] = new Image();
+                images[index][i * 10 + j].src = '../images/prc/' + index + '-' + i + '-' + j + '.png'
+            }
+        }
+    }
+    loadImage(4);
     function selectImage(value) {
         image_number = 4 - value;
+        loadImage(image_number);
 
         document.querySelectorAll('.img-btn').forEach((btn, i) => {
             btn.classList.toggle('active', i === value);
@@ -97,9 +111,9 @@ We visualized the changes in routing as Gaussian noise was gradually added.
             document.getElementById('mainImgLabel').innerHTML = "Noised Image";
 
         }
-        document.getElementById('img1').src = '../images/prc/' + image_number + '-0-' + noise_level + '.png';
-        document.getElementById('img2').src = '../images/prc/' + image_number + '-1-' + noise_level + '.png';
-        document.getElementById('img3').src = '../images/prc/' + image_number + '-2-' + noise_level + '.png';
+        document.getElementById('img1').src = images[image_number][noise_level].src;
+        document.getElementById('img2').src = images[image_number][1 + noise_level].src;
+        document.getElementById('img3').src = images[image_number][2 + noise_level].src;
     }
 </script>
 
