@@ -115,6 +115,7 @@ We visualized the changes in routing as Gaussian noise was gradually added.
         document.getElementById('img2').src = images[image_number][1 + noise_level].src;
         document.getElementById('img3').src = images[image_number][2 + noise_level].src;
     }
+    for (let i = 0; i < 4; i++) loadImage(i);
 </script>
 
 <style>
